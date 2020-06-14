@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>
+            Habit Tracker | Add New
+        </title>
+        <link rel="Stylesheet" href="/css/create.css">
+    </head>
+    <body>
+        <div id="main-div">
+            <h2>
+                Add New Habit
+            </h2>
+            <form action="/create" method="POST">
+                <div id="habit">
+                    <p> Habit </p>
+                    <input type="text" name="habit" placeholder="Name of the new habit" required>
+                </div>
+                <div id="time">
+                    <p> Time </p>
+                    <input type="time" name="time" required>
+                </div>
+                <p> Repeat </p>
+                <div id="repeat-div">
+                    <% for (let i of days) { %> 
+                        <input type="checkbox" value="<%= i %>" name="repeat">
+                        <label for="<%= i %>"  >
+                            <p> <%= i %></p>
+                        </label>  
+                    <% } %>
+                </div>
+                <p id="info">Please enter data from your previous habit tracker below. Please submit the form if this is your first habit tracking application or you don't want to enter the data.</p>
+                <div id="additional-info">
+                    <div>
+                        <p> Current Streak</p>
+                        <input type="number" name="currentStreak" placeholder="Enter the duration of your current streak" value="0">
+                    </div>
+                    <div>
+                        <p> Longest Streak</p>
+                        <input type="number" name="longestStreak" placeholder="Enter the duration of your longest streak" value="0">
+                    </div>
+                </div>
+                <button type="submit">Create Habit</button>
+                <button type="reset">Reset</button>
+            </form>
+        </div>
+    </body>
+</html>

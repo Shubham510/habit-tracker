@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>
+            Habit Tracker
+        </title>
+        <script src="https://kit.fontawesome.com/37c6d4056e.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="heading">
+            <h2>
+                Detail View
+            </h2>
+            <a href="./weekly-view"><i class="fas fa-calendar-week"></i></a>
+            <a href="./create-habit"><i class="fas fa-plus"></i></a>
+        </div>
+        <div id="habits-div">
+            <form action="/update-habit" method="POST">
+                <% for (let i of habits) { %> 
+                    <input type="checkbox" value="<%= i.id %>" name = "habit">
+                    <label for= "<%= i.id %>">
+                        <div id="habit-title">
+                            <p><%= i.habit %></p>
+                            <p><%= i.time %></p>
+                        </div>
+                        <div id="habit-details">
+                            <p> <%= i.currentStreak %></p>
+                            <p> <%= i.longestStreak %></p>
+                            <p> <%= i.days %></p>
+                        </div>
+                    </label>  
+                <% } %>
+                <button type="submit">Done</button>
+                <button type="submit">Skipped</button>
+            </form>
+        </div>
+        
+    </body>
+</html>

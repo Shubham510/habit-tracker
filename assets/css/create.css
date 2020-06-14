@@ -1,0 +1,72 @@
+body{
+    background-color: whitesmoke;
+}
+
+input{
+    border: none;
+    outline: none;
+    background-color: rgb(184, 179, 179);
+    padding: 10px;
+    margin-top: -10px;
+}
+
+h2{
+    text-align: center;
+    border-bottom: black 2px solid;
+}
+
+#main-div{
+    height: 70%;
+    width: 60%;
+    background-color: rgb(184, 179, 179);
+    margin-left: 20%;
+}
+
+#time{
+    margin-top: -10px;
+}
+
+input[type=time]{
+    margin-top: -20px;
+}
+
+#repeat-div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#repeat-div p{
+    margin-top: -15px;
+    margin-right: 5px;
+}
+
+#additional-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#additional-info div{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+#additional-info div input{
+    margin-top: 0px;
+}
+
+#info{
+    font-size: 0.8rem;
+}
+
+button[type=submit]{
+    margin-left: 40%;
+    background-color: rgb(31, 161, 31);
+}
+
+button[type=reset]{
+    margin-left: 10px;
+    background-color: red;
+}
